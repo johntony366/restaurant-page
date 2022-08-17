@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Alumni+Sans+Inline+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: white;
+    font-family: 'Aboreto', cursive;
+}
+
+.bg-image {
+    background-image: url('grilled-steak.jpg');
+    filter: grayscale(0.6);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 0, 0, 0.4);
+    border-radius: 50%;
+    rotate: -30deg;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+
+/* Navbar */
+.navbar {
+    margin-top: 48px;
+}
+
+.tabs {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+button {
+    font-size: 2rem;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+button:hover
+{
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+button:active
+{
+    background-color: rgb(255, 255, 255);
+    
+}
+
+/* Main */
+#intro {
+    margin-top: 100px;
+    display: grid;
+    justify-items: center;
+    gap: 100px;
+}
+
+.intro-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-text h1 {
+    font-size: 4rem;
+    min-width: max-content;
+}
+
+.intro-text h3 {
+    font-size: 2rem;
+    min-width: max-content;
+}
+
+.bookBtn {
+    font-size: 5rem;
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    font-family: Roboto;
+
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.gh-icon {
+    background-image: url(github-brands.svg);
+    width: 24px;
+    height: 24px;
+}
