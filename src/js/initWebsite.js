@@ -2,7 +2,7 @@ import loadHome from "./loadHome";
 import loadMenu from "./loadMenu";
 import loadContact from "./loadContact";
 
-function createDiv(className) {
+export function createDiv(className) {
     const div = document.createElement("div");
     div.setAttribute("class", className);
 
@@ -13,10 +13,13 @@ function setActiveButton() {
     const btns = document.querySelectorAll('.nav-btn');
 
     btns.forEach(btn => {
+        console.log(this);
         if (btn != this) {
             btn.classList.remove('active-btn');
         }
     });
+
+    console.log(this);
 
     this.classList.add('active-btn');
 }
@@ -45,7 +48,7 @@ function createHeader() {
                 case "Menu":
                     loadMenu();
                     break;
-                case "Contant":
+                case "Contact":
                     loadContact();
                     break;
             }
@@ -56,9 +59,9 @@ function createHeader() {
         return li;
     }
 
-    tabs.appendChild(createNavEntry("home-btn"));
-    tabs.appendChild(createNavEntry("menu-btn"));
-    tabs.appendChild(createNavEntry("contact-btn"));
+    tabs.appendChild(createNavEntry(".nav-btn home-btn"));
+    tabs.appendChild(createNavEntry(".nav-btn menu-btn"));
+    tabs.appendChild(createNavEntry(".nav-btn contact-btn"));
 
     return nav;
 }
@@ -94,7 +97,7 @@ function createBg() {
 function createBadge() {
     const badge = document.createElement("div");
     badge.setAttribute("class", "badge");
-
+    badge.textContent = "Since 1947";
     return badge;
 }
 

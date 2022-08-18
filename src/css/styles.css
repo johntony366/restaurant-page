@@ -14,7 +14,7 @@ body {
 }
 
 .bg-image {
-    background-image: url('assets/grilled-steak.jpg');
+    background-image: url('/src/assets/grilled-steak.jpg');
     filter: grayscale(0.6);
     background-size: cover;
     background-repeat: no-repeat;
@@ -65,7 +65,8 @@ button {
     color: white;
 }
 
-button:hover
+button:hover,
+.active-btn
 {
     color: black;
     background-color: rgba(255, 255, 255, 0.7);
@@ -104,7 +105,7 @@ button:active
     min-width: max-content;
 }
 
-.bookBtn {
+.book-btn {
     font-size: 5rem;
 }
 
@@ -204,7 +205,7 @@ button:active
 }
 
 .gh-icon {
-    background-image: url(./assets/github-brands.svg);
+    background-image: url('/src/assets/github-brands.svg');
     width: 24px;
     height: 24px;
 }

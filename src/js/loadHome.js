@@ -1,49 +1,26 @@
+import { createDiv } from "./initWebsite";
+
 export default function loadHome() {
-    const content = document.querySelector("#content");
+    const main = document.querySelector("main");
+    main.replaceChildren(); //Deleting all current children
 
-    const section = createSection();
-    content.appendChild(section);
+    main.setAttribute("id", "home");
+    const homeText = createDiv("home-text");
 
-    const introRow = section
-        .appendChild(createDiv("container-lg"))
-        .appendChild(
-            createDiv("row justify-content-center align-items-center")
-        );
+    const h1 = document.createElement("h1");
+    h1.textContent = "Steak House";
+    const h3 = document.createElement("h3");
+    h3.textContent = "You couldn't be more stoked";
+    homeText.appendChild(h1);
+    homeText.appendChild(h3);
 
-    const introHeading = document.createElement("h1");
+    main.appendChild(homeText);
 
-    introRow
-        .appendChild(createDiv("col-md-5 text-center"))
-        .appendChild(introHeading);
+    const booking = createDiv("booking");
+    const bookBtn = document.createElement("button");
+    bookBtn.setAttribute("class", "book-btn");
+    bookBtn.textContent = "Book Now";
+    booking.appendChild(bookBtn);
 
-    introHeading.appendChild(createDiv("display-2", "Steak House"));
-    introHeading.appendChild(
-        createDiv("display-5 text-muted", "You couldn't be more stoked")
-    );
-
-    const introImage = document.createElement("img");
-
-    introImage.setAttribute("id", "intro-img");
-    introImage.setAttribute("alt", "picture of steak");
-    introImage.setAttribute("class", "img-fluid d-none d-md-block");
-
-    introRow
-        .appendChild(createDiv("col-md-5 text-center"))
-        .appendChild(introImage);
-}
-
-function createDiv(_class, text) {
-    const div = document.createElement("div");
-    div.setAttribute("class", _class);
-    div.textContent = text;
-
-    return div;
-}
-
-function createSection() {
-    const section = document.createElement("section");
-    section.setAttribute("id", "intro");
-    content.appendChild(section);
-
-    return section;
+    main.appendChild(booking);
 }
