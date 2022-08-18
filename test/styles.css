@@ -155,8 +155,38 @@ button:active
     margin: 0;
 }
 
+/* Contact */
+#contact {
+    margin-top: 24px;
+    font-family: 'Roboto';
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.contact-container {
+    margin: 24px 156px;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    background-color: rgb(0, 0, 0, 0.4);
+    min-width: min-content;
 
+}
+
+.contact-container img {
+    width: 356px;
+    height: auto;
+    border-radius: 12px;
+}
+
+.contact-container p {
+    justify-self: center;
+}
 
 /* Footer */
 .footer {
