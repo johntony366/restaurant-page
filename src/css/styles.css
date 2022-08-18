@@ -168,6 +168,7 @@ button:active
 
 .contact-container {
     margin: 24px 156px;
+    border-radius: 12px;
     padding-bottom: 24px;
     display: flex;
     flex-direction: column;
