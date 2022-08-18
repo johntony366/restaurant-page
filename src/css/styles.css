@@ -14,7 +14,7 @@ body {
 }
 
 .bg-image {
-    background-image: url('/src/assets/grilled-steak.jpg');
+    background-image: url('/src/assets/bg-image.jpg');
     filter: grayscale(0.6);
     background-size: cover;
     background-repeat: no-repeat;
