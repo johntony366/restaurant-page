@@ -1,4 +1,5 @@
 import { createDiv } from "./initWebsite.js";
+import brisket from '/src/assets/brisket.jpg';
 
 function createMenuItem(dishName, imgSrc, imgAlt, description) {
     const menuItem = createDiv('menu-item');
@@ -32,7 +33,7 @@ export default function loadMenu() {
     main.appendChild(
         createMenuItem(
             "Brisket",
-            "/src/assets/brisket.jpg",
+            brisket,
             "Smoked brisket",
             "A cut of meat from the breast or lower chest of beef or veal."
         )
@@ -40,7 +41,7 @@ export default function loadMenu() {
     main.appendChild(
         createMenuItem(
             "Brisket",
-            "/src/assets/brisket.jpg",
+            brisket,
             "Smoked brisket",
             "A cut of meat from the breast or lower chest of beef or veal."
         )
@@ -48,7 +49,7 @@ export default function loadMenu() {
     main.appendChild(
         createMenuItem(
             "Brisket",
-            "/src/assets/brisket.jpg",
+            brisket,
             "Smoked brisket",
             "A cut of meat from the breast or lower chest of beef or veal."
         )
@@ -56,7 +57,7 @@ export default function loadMenu() {
     main.appendChild(
         createMenuItem(
             "Brisket",
-            "/src/assets/brisket.jpg",
+            brisket,
             "Smoked brisket",
             "A cut of meat from the breast or lower chest of beef or veal."
         )
@@ -64,7 +65,7 @@ export default function loadMenu() {
     main.appendChild(
         createMenuItem(
             "Brisket",
-            "/src/assets/brisket.jpg",
+            brisket,
             "Smoked brisket",
             "A cut of meat from the breast or lower chest of beef or veal."
         )
@@ -72,7 +73,7 @@ export default function loadMenu() {
     main.appendChild(
         createMenuItem(
             "Brisket",
-            "/src/assets/brisket.jpg",
+            brisket,
             "Smoked brisket",
             "A cut of meat from the breast or lower chest of beef or veal."
         )
@@ -80,7 +81,7 @@ export default function loadMenu() {
     main.appendChild(
         createMenuItem(
             "Brisket",
-            "/src/assets/brisket.jpg",
+            brisket,
             "Smoked brisket",
             "A cut of meat from the breast or lower chest of beef or veal."
         )
@@ -88,7 +89,7 @@ export default function loadMenu() {
     main.appendChild(
         createMenuItem(
             "Brisket",
-            "/src/assets/brisket.jpg",
+            brisket,
             "Smoked brisket",
             "A cut of meat from the breast or lower chest of beef or veal."
         )
