@@ -5,6 +5,7 @@ function createMenuItem(dishName, imgSrc, imgAlt, description) {
 
     const menuItemHeading = document.createElement('h6');
     menuItemHeading.setAttribute('class', 'menu-item-heading');
+    menuItemHeading.textContent = dishName;
 
     const menuItemImage = document.createElement('img');
     menuItemImage.setAttribute('class', 'menu-item-image');

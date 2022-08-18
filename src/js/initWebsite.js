@@ -9,19 +9,16 @@ export function createDiv(className) {
     return div;
 }
 
-function setActiveButton() {
+function setActiveButton(targetButton) {
     const btns = document.querySelectorAll('.nav-btn');
 
     btns.forEach(btn => {
-        console.log(this);
-        if (btn != this) {
+        if (btn != targetButton) {
             btn.classList.remove('active-btn');
         }
     });
 
-    console.log(this);
-
-    this.classList.add('active-btn');
+    targetButton.classList.add('active-btn');
 }
 
 function createHeader() {
@@ -32,15 +29,15 @@ function createHeader() {
     tabs.setAttribute("class", "tabs");
     nav.appendChild(tabs);
 
-    function createNavEntry(className) {
+    function createNavEntry(className, textContent) {
         const li = document.createElement("li");
 
         const btn = document.createElement("button");
-        btn.setAttribute("class", className);
-        btn.textContent = className[0].toUpperCase() + className.slice(1);
+        btn.setAttribute("class", `nav-btn ${className}`);
+        btn.textContent = textContent;
 
         btn.addEventListener('click', (e) => {
-            setActiveButton();
+            setActiveButton(e.target);
             switch (e.target.textContent) {
                 case "Home":
                     loadHome();
@@ -59,9 +56,9 @@ function createHeader() {
         return li;
     }
 
-    tabs.appendChild(createNavEntry(".nav-btn home-btn"));
-    tabs.appendChild(createNavEntry(".nav-btn menu-btn"));
-    tabs.appendChild(createNavEntry(".nav-btn contact-btn"));
+    tabs.appendChild(createNavEntry("home-btn", "Home"));
+    tabs.appendChild(createNavEntry("menu-btn", "Menu"));
+    tabs.appendChild(createNavEntry("contact-btn", "Contact"));
 
     return nav;
 }
